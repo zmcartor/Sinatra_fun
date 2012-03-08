@@ -18,6 +18,15 @@ get '/bad' do
 	halt 500
 end
 
+#creating custom headers
+#simply takes a hash of values.
+
+get '/headers' do
+	headers 'foo'=>'bar' , 'hello' => 'there'
+	'headers set have fun!'
+end
+
+
 not_found do
 	content_type :txt
 	'whoa sorry.'
