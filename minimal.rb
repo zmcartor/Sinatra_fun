@@ -26,6 +26,11 @@ get '/headers' do
 	'headers set have fun!'
 end
 
+#send out the whole request obj.
+get '/request_spy' do
+	request.env.map { |e| e.to_s+"<br>" }
+end
+
 
 not_found do
 	content_type :txt
