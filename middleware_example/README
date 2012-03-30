@@ -1,0 +1,12 @@
+Fun little "middleware" example with Sinatra.
+
+This trivial example adds a "thing" to a box when visiting
+/inbox/<some string>
+
+The list of things within the box are displayed as subsequent items are added.
+
+Calling /clear will trigger the middleware route to clear the app.settings
+structure. The main application file is also re-loaded. Middleware like this
+is very handy when developing sinatra apps, as changes can be made to the app file and re-loaded by visiting /clear or whatever to trigger the middleware reload.
+
+_Zach
